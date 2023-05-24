@@ -9,13 +9,20 @@ const Restoran = ({restoran}) => {
             <img className='card-img-top' src={restoran.slika} alt='Slika'/>
             <div className="card-body">
                 <h3 className="card-title">{restoran.naziv}</h3>
-                <p className="card-text">{restoran.lokacija}{restoran.kontakt}{restoran.ocena}</p>
+                <p className="card-text">
+                  Lokacija:{restoran.lokacija} <br/>
+                  Kontakt:{restoran.kontakt} <br/>
+                  Ocena: {restoran.ocena} <br/>
+                </p>
             </div>
             <div className="favourite">
               <p>DODAJ U OMILJENE </p>
-            <React.Fragment>
-                <Toggle label={restoran.naziv}/>
-            </React.Fragment>
+              <button className='btnFav'>
+                <React.Fragment>
+                  <Toggle label={restoran.naziv}/>
+                </React.Fragment>
+              </button>
+
             </div>
 
 
