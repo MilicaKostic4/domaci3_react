@@ -14,7 +14,7 @@ function NavBar() {
                     <Link to='/'>POČETNA</Link>
                 </li>
                 <li className="navElement">
-                    <Link to='/restorani'>OMILJENO</Link>
+                    <Link to='/omiljeni'>OMILJENO</Link>
                 </li>
                 <li className="navElement">
                     <input className='navSearch' type="search" placeholder="Pretraga"/>
