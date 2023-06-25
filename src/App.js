@@ -102,7 +102,7 @@ function App() {
       <BrowserRouter>
         <NavBar/>
         <Routes>
-          <Route path="/" element={<Restorani restorani={restorani} dodavanje={dodajUOmiljene} />}></Route>
+          <Route path="/" element={<Restorani restorani={restorani} dodavanje={dodajUOmiljene} ukloni={ukloniIzOmiljenih}/>}></Route>
           <Route path="/omiljeni" element={<Omiljeni restorani={favouriteRest} ukloni={ukloniIzOmiljenih} rezervisi={rezervisi}/>}></Route>
         </Routes>
       </BrowserRouter>

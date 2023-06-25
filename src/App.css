@@ -115,14 +115,22 @@ a .active, a:hover{
 }
 
 .favourite{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  display: grid;
+}
+
+.btnFavAdd{
+  justify-self: left;
+}
+.btnFavRmv{
+  justify-self: right;
 }
 
 .btnFav{
-  border: none;
+  height: 50px;
+  width: 180px;
+  margin: 10px;
 }
+
 
 /*OMILJENO*/
 .card-restoran{
@@ -150,9 +158,16 @@ a .active, a:hover{
   width: 95px;
 }
 
-
 .btnsFav{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 10px;
 }
+
+.btn:hover{
+  background: #cdc0be;
+  transition: .5s;
+}
+
+

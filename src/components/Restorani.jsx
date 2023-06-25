@@ -1,7 +1,7 @@
 import React from 'react';
 import Restoran from './Restoran';
 
-function Restorani({restorani, dodavanje}) {
+function Restorani({restorani, dodavanje, ukloni}) {
   return (
     <div className="restoraniStrana">
         <div className="poruka">
@@ -9,7 +9,7 @@ function Restorani({restorani, dodavanje}) {
         </div>
         <div className="sviRestorani">
             {restorani.map((r) => (
-               <Restoran key={r.id} restoran={r} dodavanje={dodavanje} favourite={1}/>
+               <Restoran key={r.id} restoran={r} dodavanje={dodavanje} favourite={1} ukloni={ukloni}/>
             ))}
         </div>
 

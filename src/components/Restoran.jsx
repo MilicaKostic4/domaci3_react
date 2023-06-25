@@ -1,5 +1,4 @@
 import React from 'react'
-import Toggle from './Toggle'
 
 const Restoran = ({restoran, dodavanje, favourite, ukloni, rezervisi}) => {
   return (
@@ -18,17 +17,16 @@ const Restoran = ({restoran, dodavanje, favourite, ukloni, rezervisi}) => {
             </div>
             {favourite === 1 ? (
               <div className="favourite">
-                <p>DODAJ U OMILJENE </p>
-                <button className='btnFav' onClick={()=>dodavanje(restoran.id, restoran.naziv)} >
-                  <React.Fragment>
-                    <Toggle label={restoran.naziv}/>
-                  </React.Fragment>
+                <button className={restoran.omiljeni===0? 'btnFav btn btnFavAdd':'btnFav btn btnFavRmv'}
+                  onClick={()=>{restoran.omiljeni===0?(dodavanje(restoran.id, restoran.naziv)):(ukloni(restoran.id, restoran.naziv))}} >
+                {restoran.omiljeni===0? "DODAJ U OMILJENE":"UKLONI IZ OMILJENIH"}
+                  
                 </button>
               </div>
             ):(
               <div className='btnsFav'>
-                <button className='btnRezervacija' onClick={()=>rezervisi(restoran.id)}>REZERVACIJA</button>
-                <button className='btnUkloni' onClick={()=>ukloni(restoran.id, restoran.naziv)}>UKLONI IZ OMILJENIH</button>
+                <button className='btnRezervacija btn' onClick={()=>rezervisi(restoran.id)}>REZERVACIJA</button>
+                <button className='btnUkloni btn' onClick={()=>ukloni(restoran.id, restoran.naziv)}>UKLONI IZ OMILJENIH</button>
                 
 
               </div>
