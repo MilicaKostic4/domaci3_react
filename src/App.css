@@ -24,6 +24,7 @@ nav{
   display: inline-block;
   margin: 9px 5px;
   background: #A08986;
+  text-shadow: 0 1px 3px rgb(27,27,27);
 }
 
 .navElement{
@@ -67,11 +68,6 @@ a .active, a:hover{
   color: #4a2632;
 }
 
-.btnSearch:hover{
-  color: black;
-  box-shadow: inset 50px 0 0 0 #cdc0be;
-  background: #cdc0be;
-}
 ::placeholder{
   color: #4a2632;
 }
@@ -84,6 +80,19 @@ a .active, a:hover{
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.poruka{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poruka h1{
+  color: #4a2632;
+  font-size: 35px;
+  text-shadow: 0 1px 3px rgb(27,27,27);
 }
 
 .card {
