@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Restorani from './components/Restorani';
 import Omiljeni from './components/Omiljeni';
+import Footer from './components/Footer';
 import { useState } from 'react';
 
 function App() {
@@ -98,13 +99,16 @@ function App() {
 
 
   return (
-    <div>
+    <div style={{display:'flex', flexDirection:'column', minHeight: '100vh', justifyContent: 'space-between'}}>
       <BrowserRouter>
-        <NavBar/>
-        <Routes>
-          <Route path="/" element={<Restorani restorani={restorani} dodavanje={dodajUOmiljene} ukloni={ukloniIzOmiljenih}/>}></Route>
-          <Route path="/omiljeni" element={<Omiljeni restorani={favouriteRest} ukloni={ukloniIzOmiljenih} rezervisi={rezervisi}/>}></Route>
-        </Routes>
+        <div>
+          <NavBar/>
+          <Routes>
+            <Route path="/" element={<Restorani restorani={restorani} dodavanje={dodajUOmiljene} ukloni={ukloniIzOmiljenih}/>}></Route>
+            <Route path="/omiljeni" element={<Omiljeni restorani={favouriteRest} ukloni={ukloniIzOmiljenih} rezervisi={rezervisi}/>}></Route>
+          </Routes>
+        </div>
+        <Footer></Footer>
       </BrowserRouter>
     </div>
   );

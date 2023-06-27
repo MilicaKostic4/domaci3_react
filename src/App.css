@@ -170,4 +170,56 @@ a .active, a:hover{
   transition: .5s;
 }
 
+/*FOOTER*/
+.footer1 {
+  background: #A08986;
+  height: 200px;
+  width: 90%;
+  border-radius: 50px;
+  display: grid;
+  justify-content: center;
+  margin: auto;
+  box-shadow: 0px 0px 3px 0px rgba(10, 10, 10, 0.2);
+}
 
+.footer11 {
+  background: #A08986;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.fgroup{
+  background: #A08986;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  text-shadow: 0 1px 3px rgb(143, 143, 137);
+}
+
+.footer11 svg{
+  height: 30px;
+  width: 30px;
+  background: #A08986;
+}
+
+.footer1 a{
+  background: #A08986;
+}
+
+.footer12{
+  background: #A08986;
+  height: 50px;
+  border-top: 3px dotted #4a2632;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.footer12 p, span{
+  background: #A08986;
+}
