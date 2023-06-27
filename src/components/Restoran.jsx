@@ -12,7 +12,7 @@ const Restoran = ({restoran, dodavanje, favourite, ukloni, rezervisi}) => {
                   Lokacija:{restoran.lokacija} <br/>
                   Kontakt:{restoran.kontakt} <br/>
                   Ocena: {restoran.ocena} <br/>
-                  Rezervacija: {restoran.rezervacija} <br/>
+                  {favourite === 0 ? (<div>Rezervacija: {restoran.rezervacija} <br/></div>) :<br/>}                 
                 </p>
             </div>
             {favourite === 1 ? (
