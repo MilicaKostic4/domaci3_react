@@ -154,7 +154,9 @@ a .active, a:hover{
 }
 
 .restoran-container{
-  margin:20px
+  margin:20px;
+  display: grid;
+  justify-content: center;
 }
 
 .btnRezervacija{
