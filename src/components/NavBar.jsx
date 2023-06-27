@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 import React from 'react';
 import {GoSearch} from'react-icons/go'
 
-function NavBar() {
+function NavBar({pretrazi}) {
   return (
     <div>
         <nav className='navBar'>
@@ -17,7 +17,7 @@ function NavBar() {
                     <Link to='/omiljeni'>OMILJENO</Link>
                 </li>
                 <li className="navElement">
-                    <input className='navSearch' type="search" placeholder="Pretraga"/>
+                    <input id="kriterijum" className='navSearch' type="search" placeholder="Pretraga" onChange={()=>pretrazi(document.getElementById('kriterijum').value)}/>
                     <button className='btnSearch' type="submit"><GoSearch/></button>
                 </li>
             </ul>

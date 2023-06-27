@@ -61,6 +61,12 @@ function App() {
     }
   ]);
 
+  const [pretraga, setPretraga] =useState("");
+
+  function pretrazi(element){
+    setPretraga(element);
+  }
+
   function omiljeniRefresh(){
     let omiljeniRestorani = restorani.filter((rest)=> rest.omiljeni===1);
     setFavouriteRes(omiljeniRestorani);
@@ -102,10 +108,10 @@ function App() {
     <div style={{display:'flex', flexDirection:'column', minHeight: '100vh', justifyContent: 'space-between'}}>
       <BrowserRouter>
         <div>
-          <NavBar/>
+          <NavBar pretrazi={pretrazi}/>
           <Routes>
-            <Route path="/" element={<Restorani restorani={restorani} dodavanje={dodajUOmiljene} ukloni={ukloniIzOmiljenih}/>}></Route>
-            <Route path="/omiljeni" element={<Omiljeni restorani={favouriteRest} ukloni={ukloniIzOmiljenih} rezervisi={rezervisi}/>}></Route>
+            <Route path="/" element={<Restorani restorani={restorani} dodavanje={dodajUOmiljene} ukloni={ukloniIzOmiljenih} pretraga={pretraga}/>}></Route>
+            <Route path="/omiljeni" element={<Omiljeni restorani={favouriteRest} ukloni={ukloniIzOmiljenih} rezervisi={rezervisi} pretraga={pretraga}/>}></Route>
           </Routes>
         </div>
         <Footer></Footer>
